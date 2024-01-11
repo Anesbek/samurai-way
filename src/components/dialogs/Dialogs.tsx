@@ -13,13 +13,11 @@ const Dialogs = (props: any) => {
 
     return (
         <div className={s.dialogs}>
-
             <div className={s.dialogsItems}>
                 {dialogsElements}
             </div>
             <div className={s.messeges}>
                 {messegesElemeents}
-
             </div>
         </div>
     );
