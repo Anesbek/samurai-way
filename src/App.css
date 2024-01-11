@@ -1,0 +1,26 @@
+.app-wpapper {
+  display:grid;
+  width: 1200px;
+  margin: 0 auto;
+  grid-template-areas:
+          "header header"
+          "nav content";
+
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+
+}
+.app-wpapper-content {
+    grid-area: content;
+    background-color: #806b57;
+
+}
+
+.app-wpapper-content img {
+    width: 100%;
+    height: 740px;
+    object-fit: cover;
+}
+
+
+

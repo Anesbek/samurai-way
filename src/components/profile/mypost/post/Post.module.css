@@ -1,0 +1,10 @@
+
+.item{
+    color: blue;
+}
+.item img {
+     width: 80px;
+    object-fit: cover;
+    height: 80px;
+    border-radius: 50%;
+}
