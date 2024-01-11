@@ -18,6 +18,7 @@ const Dialogs = (props: any) => {
             </div>
             <div className={s.messeges}>
                 {messegesElemeents}
+                <p>1</p>
             </div>
         </div>
     );
