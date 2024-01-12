@@ -15,7 +15,6 @@ export const MyPost = (props: any) => {
             props.addPost(text);
         }
 
-
     }
 
     return (
