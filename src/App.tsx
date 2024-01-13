@@ -28,8 +28,10 @@ const App = (props:any) => {
 
                     <Route path="/dialogs" render={()=><Dialogs state ={props.state.dialogPage} />}/>
 
-                    <Route path="/profile" render={()=><Profile state = {props.state.profilePage}
-                                                                addPost={props.addPost}/>}/>
+                    <Route path="/profile" render={()=><Profile profilePage = {props.state.profilePage}
+                                                                addPost={props.addPost}
+                                                                updateNewPostText={props.updateNewPost}
+                    />}/>
 
                 </div>
             </div>

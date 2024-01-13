@@ -11,7 +11,9 @@ export const Profile = (props: any) => {
     return (
         <div>
             <ProfileInfo/>
-            <MyPost posts = {props.state.posts}
+            <MyPost posts = {props.profilePage.posts}
+                    newPostText={props.profilePage.newPostText}
+                    updateNewPostText={props.updateNewPostText}
                     addPost ={props.addPost}/>
         </div>
 

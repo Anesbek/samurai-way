@@ -10,11 +10,12 @@ export const MyPost = (props: any) => {
 
     let newPostElement = React.createRef<HTMLTextAreaElement>();
     let addPost = () => {
-        if (newPostElement.current) {
-            let text = newPostElement.current.value;
-            props.addPost(text);
-        }
+            props.addPost();
+    }
 
+    let onPostChange = ()=> {
+        let text = newPostElement.current?.value;
+        props.updateNewPostText();
     }
 
     return (
@@ -23,7 +24,7 @@ export const MyPost = (props: any) => {
             <h3>My Posts</h3>
             <div>
                 <div>
-                    <textarea ref={newPostElement}></textarea>
+                    <textarea onChange={onPostChange} ref={newPostElement } value={props.newPostText}/>
                 </div>
                 <div>
                     <button onClick={addPost}>Add Post</button>
