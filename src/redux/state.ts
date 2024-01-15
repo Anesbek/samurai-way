@@ -1,4 +1,25 @@
-import {rerenderEntiretree} from "../render";
+let rerenderEntireTree = (state: {
+    dialogPage: {
+        dialogs: ({ name: string; id: number } | { name: string; id: number } | { name: string; id: number } | {
+            name: string;
+            id: number
+        } | { name: string; id: number } | { name: string; id: number })[];
+        messeges: ({ id: number; message: string } | { id: number; message: string } | {
+            id: number;
+            message: string
+        } | { id: number; message: string } | { id: number; message: string })[]
+    };
+    profilePage: {
+        newPostText: string;
+        posts: ({ likesCount: number; id: number; message: string } | {
+            likesCount: number;
+            id: number;
+            message: string
+        } | { likesCount: number; id: number; message: string } | { likesCount: number; id: number; message: string })[]
+    }
+})=> {
+    console.log('state chanched')
+}
 
 let state = {
     profilePage: {
@@ -37,7 +58,7 @@ let state = {
 
 
 
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         id: 5,
         message: state.profilePage.newPostText,
@@ -46,10 +67,14 @@ export let addPost = () => {
     state.profilePage.posts.push(newPost);
 
     state.profilePage.newPostText = '';
-    rerenderEntiretree(state);
+    // rerenderEntireTree();
 }
-    export let updateNewPostText = (newText: any) => {
+    export const updateNewPostText = (newText: any) => {
     state.profilePage.newPostText = newText;
+    }
+
+    export const subcriber = (obsserver: any)=> {
+        rerenderEntireTree = obsserver;
     }
 
 
